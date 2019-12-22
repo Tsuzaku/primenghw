@@ -1,0 +1,85 @@
+<h1>showcase primeng</h1>
+<hr>
+
+<!-- Table -->
+<h3>tabla bien</h3>
+<p-table [value]="tablaBien">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-tLinea>
+        <tr>
+            <td>{{tLinea.codigo}}</td>
+            <td>{{tLinea.empresa}}</td>
+            <td>{{tLinea.codigoPostal}}</td>
+            <td>{{tLinea.email}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+<hr>
+
+<!-- Buttons -->
+<h3>botones preciosos</h3>
+<button pButton type="button" label="Primary"></button>
+<button pButton type="button" label="Secondary" class="ui-button-secondary"></button>
+<button pButton type="button" label="Success" class="ui-button-success"></button>
+<button pButton type="button" label="Info" class="ui-button-info"></button>
+<button pButton type="button" label="Warning" class="ui-button-warning"></button>
+<button pButton type="button" label="Danger" class="ui-button-danger"></button>
+<hr>
+
+<!-- Card -->
+<p-card header="Self-esteem boost" subheader="I've got you homie" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+  <p-header>
+      <img src="Card" src="assets/raccoon_meme.jpeg">
+  </p-header>
+  <div>This raccoon will make you feel better about yourself</div>
+  <p-footer>
+      <button pButton type="button" label="Save" icon="pi pi-check" style="margin-right: .25em"></button>
+      <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary"></button>
+  </p-footer>
+</p-card>
+<hr>
+
+<!-- Calendar -->
+<h3>Date</h3>
+  <p-calendar [(ngModel)]="date" [showIcon]="true"></p-calendar>
+
+<hr>
+
+<!-- Input text -->
+<h3>Controles</h3>
+<span class="ui-float-label">
+  <input id="float-input" type="text" size="30" pInputText> 
+  <label for="float-input">Username</label>
+</span>
+
+<!-- Checkbox -->
+<div class="ui-g" style="width:250px;margin-bottom:10px">
+    <div class="ui-g-12"><p-checkbox name="group1" value="New York" label="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox></div>
+    <div class="ui-g-12"><p-checkbox name="group1" value="San Francisco" label="San Francisco" [(ngModel)]="selectedCities" inputId="sf"></p-checkbox></div>
+    <div class="ui-g-12"><p-checkbox name="group1" value="Los Angeles" label="Los Angeles" [(ngModel)]="selectedCities" inputId="la"></p-checkbox></div>
+</div>
+
+<!-- Rating -->
+<h3>Nivel de calidad</h3>
+<p-rating [(ngModel)]="val1"></p-rating>
+
+<!-- Input number -->
+<h3>Temperatura</h3>
+<p-spinner size="30" [(ngModel)]="val1"></p-spinner>
+
+<!-- Selector -->
+<h3>Selector</h3>
+<p-dropdown [options]="tablaBien" [(ngModel)]="selectedEmpresa" placeholder="Select a Enterprise" optionLabel="empresa" [showClear]="true"></p-dropdown>
+<p>Selected Enterprise: {{selectedEmpresa ? selectedEmpresa.empresa : 'none'}}</p>
+
+<h3>Tool tip</h3>
+
+<hr>
+
+
+
